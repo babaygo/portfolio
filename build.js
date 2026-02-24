@@ -9,4 +9,3 @@ const CONFIG = {
 `;
 
 fs.writeFileSync('js/config.js', content);
-console.log('✅ config.js generated' + (process.env.WEB3FORMS_KEY ? ' (key injected from env)' : ' (no env key found, using placeholder)'));
