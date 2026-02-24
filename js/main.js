@@ -13,11 +13,8 @@ function initCursor() {
 
     hoverElements.forEach(el => {
         el.addEventListener('mouseenter', () => {
-            cursor.style.width = '60px';
-            cursor.style.height = '60px';
-            cursor.style.backgroundColor = '#FBFF48';
+            cursor.style.backgroundColor = 'transparent';
             cursor.style.mixBlendMode = 'normal';
-            cursor.style.border = '2px solid black';
         });
         el.addEventListener('mouseleave', () => {
             cursor.style.width = '24px';
