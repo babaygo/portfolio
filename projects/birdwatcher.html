@@ -6,65 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Birdwatcher — Application d'observation d'oiseaux par Simon Laurent">
     <title>Birdwatcher | Simon Laurent</title>
-    <meta name="theme-color" content="#121212">
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neo-yellow': '#FBFF48', 'neo-pink': '#FF70A6', 'neo-blue': '#3B82F6',
-                        'neo-green': '#33FF57', 'neo-purple': '#A855F7', 'neo-orange': '#FF9F1C',
-                        'neo-red': '#FF2A2A', 'neo-white': '#FFFDF5', 'neo-black': '#121212',
-                    },
-                    fontFamily: {
-                        'display': ['"Space Grotesk"', 'sans-serif'],
-                        'mono': ['"JetBrains Mono"', 'monospace'],
-                    },
-                    boxShadow: {
-                        'hard': '4px 4px 0px 0px #000', 'hard-sm': '2px 2px 0px 0px #000',
-                        'hard-lg': '8px 8px 0px 0px #000', 'hard-xl': '12px 12px 0px 0px #000',
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/components.js"></script>
 </head>
 
 <body class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow">
-    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
-    <div class="fixed top-0 left-0 h-2 bg-neo-blue z-[60] border-b-2 border-black" id="progressBar" style="width: 0%"></div>
+    <div data-component="cursor" data-progress-color="neo-blue"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
-        <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
-            <a href="../index.html"
-                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
-                SIMON.exe
-            </a>
-            <div class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard">
-                <a href="../index.html#about" class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
-                <a href="../index.html#skills" class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/SKILLS</a>
-                <a href="../index.html#projects" class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/WORK</a>
-                <a href="../index.html#contact" class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">CONTACT</a>
-            </div>
-        </div>
-    </nav>
+    <div data-component="navbar"></div>
 
     <!-- BACK BUTTON -->
-    <div class="fixed bottom-6 left-6 z-50">
-        <a href="../index.html#projects"
-            class="back-btn bg-neo-black text-white border-2 border-black px-4 py-3 font-mono font-bold text-sm shadow-hard hover:bg-neo-blue hover:shadow-none transition-all cursor-hover flex items-center gap-2">
-            <i class="ri-arrow-left-line"></i> RETOUR
-        </a>
-    </div>
+    <div data-component="back-button"></div>
 
     <!-- PROJECT HERO -->
     <section class="project-hero flex flex-col justify-center items-center px-4 pt-28 pb-16 relative overflow-hidden border-b-4 border-black">
@@ -213,15 +167,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-black text-white py-8 px-4 border-t-4 border-neo-green font-mono">
-        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-            <p class="text-gray-500 text-sm">&copy; 2025 SIMON.exe // SYSTEM_END</p>
-            <div class="flex gap-4">
-                <a href="https://github.com/babaygo" class="text-xl hover:text-neo-yellow transition-colors cursor-hover"><i class="ri-github-fill"></i></a>
-                <a href="mailto:slaurent144600@gmail.com" class="text-xl hover:text-neo-blue transition-colors cursor-hover"><i class="ri-mail-fill"></i></a>
-            </div>
-        </div>
-    </footer>
+    <div data-component="footer-compact"></div>
 
     <script src="../js/main.js"></script>
 </body>

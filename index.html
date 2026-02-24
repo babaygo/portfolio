@@ -7,28 +7,29 @@
 
     <!-- SEO Meta Tags -->
     <meta name="description"
-        content="Simon Laurent | Full Stack Developer — Portfolio NeoBrutalist. JavaScript, Python, Dart, Java.">
+        content="Simon Laurent | Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
     <meta name="keywords"
-        content="Simon Laurent, Full Stack Developer, NeoBrutalist, Portfolio, Web Development, JavaScript, Python, Flutter, Java">
+        content="Simon Laurent, Full Stack Developer, Portfolio, Web Development, JavaScript, Python, Flutter, Java">
     <meta name="author" content="Simon Laurent">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="SIMON LAURENT | Full Stack Brutalist">
+    <meta property="og:title" content="SIMON LAURENT | Full Stack">
     <meta property="og:description"
-        content="Full Stack Developer — Portfolio NeoBrutalist. JavaScript, Python, Dart, Java.">
+        content="Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/97893962?v=4">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:title" content="SIMON LAURENT | Full Stack Brutalist">
+    <meta property="twitter:title" content="SIMON LAURENT | Full Stack">
     <meta property="twitter:description"
-        content="Full Stack Developer — Portfolio NeoBrutalist. JavaScript, Python, Dart, Java.">
+        content="Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
 
-    <title>SIMON LAURENT | Full Stack Brutalist</title>
+    <title>SIMON LAURENT | Full Stack</title>
 
     <!-- Theme & Performance -->
     <meta name="theme-color" content="#121212">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
         as="style">
@@ -45,81 +46,20 @@
       "sameAs": [
         "https://github.com/babaygo"
       ],
-      "description": "Full Stack Developer specializing in high-performance NeoBrutalist web experiences."
+      "description": "Full Stack Developer specializing in high-performance web experiences."
     }
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
-        rel="stylesheet">
-
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neo-yellow': '#FBFF48',
-                        'neo-pink': '#FF70A6',
-                        'neo-blue': '#3B82F6',
-                        'neo-green': '#33FF57',
-                        'neo-purple': '#A855F7',
-                        'neo-orange': '#FF9F1C',
-                        'neo-red': '#FF2A2A',
-                        'neo-white': '#FFFDF5',
-                        'neo-black': '#121212',
-                    },
-                    fontFamily: {
-                        'display': ['"Space Grotesk"', 'sans-serif'],
-                        'mono': ['"JetBrains Mono"', 'monospace'],
-                    },
-                    boxShadow: {
-                        'hard': '4px 4px 0px 0px #000',
-                        'hard-sm': '2px 2px 0px 0px #000',
-                        'hard-lg': '8px 8px 0px 0px #000',
-                        'hard-xl': '12px 12px 0px 0px #000',
-                    }
-                }
-            }
-        }
-    </script>
-
-    <link rel="stylesheet" href="css/style.css">
+    <script src="js/components.js"></script>
 </head>
 
 <body class="text-neo-black font-display antialiased selection:bg-neo-black selection:text-neo-yellow">
 
-    <div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
-
-    <div class="fixed top-0 left-0 h-2 bg-neo-green z-[60] border-b-2 border-black" id="progressBar"
-        style="width: 0%">
-    </div>
+    <div data-component="cursor" data-progress-color="neo-green"></div>
 
     <!-- NAVBAR -->
-    <nav class="fixed top-0 w-full z-50 px-4 py-4 pointer-events-none">
-        <div class="max-w-7xl mx-auto flex justify-between items-center pointer-events-auto">
-            <a href="#"
-                class="bg-neo-white border-2 border-black px-4 py-1 text-2xl font-black shadow-hard hover:bg-neo-yellow transition-all hover:translate-x-1 hover:translate-y-1 hover:shadow-none cursor-hover">
-                SIMON.exe
-            </a>
-
-            <div class="hidden md:flex gap-4 bg-white border-2 border-black p-2 shadow-hard">
-                <a href="#about"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/ABOUT</a>
-                <a href="#skills"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/SKILLS</a>
-                <a href="#projects"
-                    class="px-3 py-1 font-mono font-bold text-sm hover:bg-black hover:text-white transition-colors cursor-hover">/WORK</a>
-                <a href="#contact"
-                    class="px-3 py-1 font-mono font-bold text-sm bg-neo-yellow border border-black hover:bg-neo-pink transition-colors cursor-hover">CONTACT</a>
-            </div>
-        </div>
-    </nav>
+    <div data-component="navbar"></div>
 
     <!-- HERO SECTION -->
     <section
@@ -480,6 +420,247 @@
         </div>
     </section>
 
+    <!-- EXPERIENCES SECTION -->
+    <section id="experience" class="py-24 px-4 bg-white border-t-4 border-black relative overflow-hidden">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-4 border-black pb-4">
+                <h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter">
+                    EXP<span class="text-neo-blue">ÉRIENCES</span>
+                </h2>
+                <div class="flex items-center gap-2 mb-2 md:mb-4">
+                    <div class="w-3 h-3 bg-neo-blue rounded-full"></div>
+                    <p class="font-mono text-neo-blue text-sm font-bold">/// PARCOURS_PRO</p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Vertical line -->
+                <div class="hidden md:block absolute left-8 top-0 bottom-0 w-1 bg-black"></div>
+
+                <!-- Experience 1: Développeur Full-Stack -->
+                <div class="reveal mb-12 md:pl-24 relative">
+                    <!-- Timeline dot -->
+                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-blue border-4 border-black rounded-full z-10"></div>
+                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-blue transition-colors">
+                                    Développeur Full-Stack
+                                </h3>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <i class="ri-building-2-line text-neo-blue"></i>
+                                    <span class="font-mono font-bold text-lg">Naomis (Groupe Keran)</span>
+                                    <span class="font-mono text-gray-400">// Nantes</span>
+                                </div>
+                            </div>
+                            <div class="bg-neo-blue text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                                2022 — 2024
+                            </div>
+                        </div>
+                        <div class="border-t-2 border-dashed border-black/20 pt-4">
+                            <ul class="space-y-3 font-mono text-sm">
+                                <li class="flex gap-3">
+                                    <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
+                                    <span>Développement web Frontend (<span class="bg-neo-yellow px-1 border border-black font-bold">Angular</span>) et Backend (<span class="bg-neo-yellow px-1 border border-black font-bold">Express.js</span>) sur les outils internes du groupe (CRM, ERP)</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
+                                    <span>Mise en place d'un outil d'<span class="bg-neo-pink px-1 border border-black font-bold">intelligence artificielle</span> pour automatiser l'analyse juridique des DCE et l'amélioration de la prise de décision</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
+                                    <span>Intégration de <span class="bg-neo-green px-1 border border-black font-bold">GitHub Copilot</span> dans l'équipe développeurs</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Angular</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Express.js</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">PostgreSQL</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">AI</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Agile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 2: Apprenti Systèmes Embarqués -->
+                <div class="reveal mb-12 md:pl-24 relative">
+                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-purple border-4 border-black rounded-full z-10"></div>
+                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-purple transition-colors">
+                                    Technicien Systèmes Embarqués
+                                </h3>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <i class="ri-building-2-line text-neo-purple"></i>
+                                    <span class="font-mono font-bold text-lg">Université Gustave Eiffel</span>
+                                    <span class="font-mono text-gray-400">// Nantes</span>
+                                </div>
+                            </div>
+                            <div class="bg-neo-purple text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                                2021 — 2022
+                            </div>
+                        </div>
+                        <div class="border-t-2 border-dashed border-black/20 pt-4">
+                            <ul class="space-y-3 font-mono text-sm">
+                                <li class="flex gap-3">
+                                    <span class="text-neo-purple font-bold shrink-0">&gt;_</span>
+                                    <span>Ajout de fonctionnalités dans un automate pour automatiser un processus de pluviation et sauvegarde de données en temps réel (<span class="bg-neo-yellow px-1 border border-black font-bold">Visilogic</span>)</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-neo-purple font-bold shrink-0">&gt;_</span>
+                                    <span>Développement d'un logiciel de <span class="bg-neo-pink px-1 border border-black font-bold">Stitching en temps réel</span> avec 8 caméras embarquées dans une centrifugeuse (<span class="bg-neo-yellow px-1 border border-black font-bold">Python / Tkinter</span>)</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Python</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Tkinter</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Visilogic</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Embarqué</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience 3: Stage Robot -->
+                <div class="reveal mb-4 md:pl-24 relative">
+                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-orange border-4 border-black rounded-full z-10"></div>
+                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
+                            <div>
+                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-orange transition-colors">
+                                    Stage — Jauge batterie Robot
+                                </h3>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <i class="ri-building-2-line text-neo-orange"></i>
+                                    <span class="font-mono font-bold text-lg">IRT Jules Verne</span>
+                                    <span class="font-mono text-gray-400">// Nantes</span>
+                                </div>
+                            </div>
+                            <div class="bg-neo-orange text-black px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                                AVR — JUIN 2021
+                            </div>
+                        </div>
+                        <div class="border-t-2 border-dashed border-black/20 pt-4">
+                            <ul class="space-y-3 font-mono text-sm">
+                                <li class="flex gap-3">
+                                    <span class="text-neo-orange font-bold shrink-0">&gt;_</span>
+                                    <span>Tests des lignes d'acquisition courant/tension du robot</span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-neo-orange font-bold shrink-0">&gt;_</span>
+                                    <span>Algorithmes de calcul de consommation batterie en <span class="bg-neo-yellow px-1 border border-black font-bold">Python</span> et implémentation sur PLC en <span class="bg-neo-yellow px-1 border border-black font-bold">C</span></span>
+                                </li>
+                                <li class="flex gap-3">
+                                    <span class="text-neo-orange font-bold shrink-0">&gt;_</span>
+                                    <span>Création d'une IHM avec <span class="bg-neo-yellow px-1 border border-black font-bold">Qt Designer</span> pour afficher le pourcentage de batterie</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="flex gap-2 mt-4 flex-wrap">
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Python</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">C</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Qt Designer</span>
+                            <span class="bg-neo-black text-white px-2 py-1 font-mono text-xs font-bold">Robotique</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION SECTION -->
+    <section id="education" class="py-24 px-4 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20"
+            style="background-image: linear-gradient(#333 1px, transparent 1px), linear-gradient(90deg, #333 1px, transparent 1px); background-size: 40px 40px;">
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-4 border-white pb-4">
+                <h2 class="text-6xl md:text-8xl font-black uppercase tracking-tighter text-white">
+                    FORM<span class="text-neo-pink">ATIONS</span>
+                </h2>
+                <div class="flex items-center gap-2 mb-2 md:mb-4">
+                    <div class="w-3 h-3 bg-neo-pink rounded-full"></div>
+                    <p class="font-mono text-neo-pink text-sm font-bold">/// DIPLÔMES</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Formation 1: Master -->
+                <div class="reveal group">
+                    <div class="bg-neo-black border-4 border-white p-6 shadow-[8px_8px_0_rgba(255,112,166,0.4)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all h-full flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2022 — 2024
+                            </div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center">
+                                <i class="ri-graduation-cap-fill text-xl text-black"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            Master — BAC+5
+                        </h3>
+                        <p class="font-mono text-neo-pink text-sm mb-3">Expert Informatique et Systèmes d'Informations</p>
+                        <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
+                            <i class="ri-map-pin-line text-neo-pink"></i>
+                            <span class="font-mono text-sm text-gray-400">EPSI, Nantes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 2: Licence Pro -->
+                <div class="reveal group">
+                    <div class="bg-neo-black border-4 border-white p-6 shadow-[8px_8px_0_rgba(255,112,166,0.4)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all h-full flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2021 — 2022
+                            </div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center">
+                                <i class="ri-graduation-cap-fill text-xl text-black"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            Licence Pro — BAC+3
+                        </h3>
+                        <p class="font-mono text-neo-pink text-sm mb-3">Systèmes Électroniques Communicants</p>
+                        <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
+                            <i class="ri-map-pin-line text-neo-pink"></i>
+                            <span class="font-mono text-sm text-gray-400">IUT de Nantes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formation 3: DUT -->
+                <div class="reveal group">
+                    <div class="bg-neo-black border-4 border-white p-6 shadow-[8px_8px_0_rgba(255,112,166,0.4)] hover:shadow-none hover:translate-x-2 hover:translate-y-2 transition-all h-full flex flex-col">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2019 — 2021
+                            </div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center">
+                                <i class="ri-graduation-cap-fill text-xl text-black"></i>
+                            </div>
+                        </div>
+                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            DUT — BAC+2
+                        </h3>
+                        <p class="font-mono text-neo-pink text-sm mb-3">Génie Électrique et Informatique Industrielle</p>
+                        <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
+                            <i class="ri-map-pin-line text-neo-pink"></i>
+                            <span class="font-mono text-sm text-gray-400">IUT de Nantes</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- PROJECTS SECTION -->
     <section id="projects" class="py-24 bg-neo-yellow border-t-4 border-black px-4 overflow-hidden">
         <div class="max-w-7xl mx-auto">
@@ -645,7 +826,7 @@
                 <div>
                     <h2 class="text-6xl font-black uppercase mb-6 leading-[0.85]">Parlons<br>Code.</h2>
                     <p class="font-mono text-lg mb-8 text-gray-600">
-                        Je suis actuellement disponible pour du freelance et ouvert aux opportunités à temps plein.
+                        Je suis actuellement disponible et ouvert aux opportunités à temps plein.
                     </p>
                     <div class="space-y-4">
                         <div class="flex items-center gap-4">
@@ -703,55 +884,7 @@
     </section>
 
     <!-- FOOTER -->
-    <footer class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
-            <div class="col-span-1 md:col-span-2">
-                <h2 class="text-4xl font-black mb-6">SIMON.</h2>
-                <p class="text-gray-400 max-w-sm">
-                    Concevoir pour le futur avec l'esthétique brute du passé. Pas de cookies, pas de trackers, juste du code.
-                </p>
-            </div>
-
-            <div>
-                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SITEMAP</h3>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="#"
-                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Accueil</a>
-                    </li>
-                    <li><a href="#projects"
-                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Projets</a>
-                    </li>
-                    <li><a href="#about"
-                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">À propos</a>
-                    </li>
-                    <li><a href="#contact"
-                            class="hover:text-white hover:underline decoration-neo-pink decoration-2 cursor-hover">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-                <h3 class="font-bold text-neo-green mb-4 border-b border-gray-700 pb-2">SOCIALS</h3>
-                <div class="flex gap-4">
-                    <a href="https://github.com/babaygo"
-                        class="text-2xl hover:text-neo-yellow transition-colors cursor-hover"><i
-                            class="ri-github-fill"></i></a>
-                    <a href="mailto:slaurent144600@gmail.com"
-                        class="text-2xl hover:text-neo-blue transition-colors cursor-hover"><i
-                            class="ri-mail-fill"></i></a>
-                </div>
-            </div>
-        </div>
-
-        <div class="text-center mt-16 pt-8 border-t border-gray-800 text-gray-500 text-sm">
-            <p>&copy; 2025 SIMON.exe // SYSTEM_END</p>
-        </div>
-
-        <div
-            class="absolute bottom-0 left-0 w-full text-[20vw] font-black text-white opacity-[0.03] leading-none select-none pointer-events-none text-center">
-            BRUTAL
-        </div>
-    </footer>
+    <div data-component="footer-full"></div>
 
     <script src="js/config.js"></script>
     <script src="js/main.js"></script>
