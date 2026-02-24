@@ -2,33 +2,36 @@
  * Shared UI components — élimine la duplication HTML entre les pages.
  * 
  * Usage dans chaque page :
- *   <script src="https://cdn.tailwindcss.com"></script>
+ *   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
  *   <script src="js/components.js"></script>
  *   Puis les éléments avec data-component="navbar" etc. sont auto-remplis.
  */
 
-// ─── TAILWIND CONFIG (runs synchronously in <head>) ───
-tailwind.config = {
-    theme: {
-        extend: {
-            colors: {
-                'neo-yellow': '#FBFF48', 'neo-pink': '#FF70A6', 'neo-blue': '#3B82F6',
-                'neo-green': '#33FF57', 'neo-purple': '#A855F7', 'neo-orange': '#FF9F1C',
-                'neo-red': '#FF2A2A', 'neo-white': '#FFFDF5', 'neo-black': '#121212',
-            },
-            fontFamily: {
-                'display': ['"Space Grotesk"', 'sans-serif'],
-                'mono': ['"JetBrains Mono"', 'monospace'],
-            },
-            boxShadow: {
-                'hard': '4px 4px 0px 0px #000',
-                'hard-sm': '2px 2px 0px 0px #000',
-                'hard-lg': '8px 8px 0px 0px #000',
-                'hard-xl': '12px 12px 0px 0px #000',
-            }
+// ─── TAILWIND THEME (injected synchronously in <head> for v4 Play CDN) ───
+(function () {
+    const style = document.createElement('style');
+    style.setAttribute('type', 'text/tailwindcss');
+    style.textContent = `
+        @theme {
+            --color-neo-yellow: #FBFF48;
+            --color-neo-pink: #FF70A6;
+            --color-neo-blue: #3B82F6;
+            --color-neo-green: #33FF57;
+            --color-neo-purple: #A855F7;
+            --color-neo-orange: #FF9F1C;
+            --color-neo-red: #FF2A2A;
+            --color-neo-white: #FFFDF5;
+            --color-neo-black: #121212;
+            --font-display: "Space Grotesk", sans-serif;
+            --font-mono: "JetBrains Mono", monospace;
+            --shadow-hard: 4px 4px 0px 0px #000;
+            --shadow-hard-sm: 2px 2px 0px 0px #000;
+            --shadow-hard-lg: 8px 8px 0px 0px #000;
+            --shadow-hard-xl: 12px 12px 0px 0px #000;
         }
-    }
-};
+    `;
+    document.head.appendChild(style);
+})();
 
 const Components = (() => {
 
@@ -43,7 +46,7 @@ const Components = (() => {
     function injectHead() {
         const tags = [
             '<meta name="theme-color" content="#121212">',
-            `<link rel="icon" type="image/svg+xml" href="${base}/favicon.svg">`,
+            `<link rel="icon" type="image/svg+xml" href="${base}/assets/favicon.svg">`,
             '<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">',
             '<link rel="preconnect" href="https://fonts.googleapis.com">',
             '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
