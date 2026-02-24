@@ -9,7 +9,7 @@
 ╚══════╝╚═╝╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝╚══════╝╚═╝  ╚═╝╚══════╝
 ```
 
-**Portfolio personnel — NeoBrutalist Design**
+**Portfolio**
 
 [![Deployed on Vercel](https://img.shields.io/badge/▲_Deployed_on-Vercel-black?style=for-the-badge&logo=vercel)](https://simonlaurent.vercel.app)
 [![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](#)
@@ -80,8 +80,7 @@ portfolio/
 ├── js/
 │   ├── components.js       # Composants UI réutilisables (navbar, footer, etc.)
 │   ├── main.js             # Logique principale (cursor, reveal, GitHub API, form)
-│   ├── config.js           # Clés API (gitignored, généré au build)
-│   └── config.example.js   # Template config pour les contributeurs
+│   └── config.js           # Clés API (gitignored, généré au build)
 │
 └── projects/
     ├── sacsabonheurs.html  # E-commerce — Next.js / Express / Stripe
@@ -94,7 +93,6 @@ portfolio/
 
 ## `>_ FEATURES`
 
-- **🖱️ Custom Cursor** — Curseur néon personnalisé qui suit la souris
 - **📊 Live GitHub Stats** — Repos, followers, commits via l'API GitHub
 - **📧 Contact Form** — Emails en direct via Web3Forms
 - **🎭 Component System** — DRY architecture, un seul fichier pour tous les éléments partagés
@@ -135,17 +133,6 @@ Le site se déploie automatiquement sur **Vercel** à chaque push sur `master`.
 ```bash
 # Le build.js génère config.js depuis les env vars Vercel
 node build.js → js/config.js
-```
-
----
-
-## `>_ PALETTE`
-
-```
- ██  #FBFF48  neo-yellow     ██  #FF70A6  neo-pink
- ██  #3B82F6  neo-blue       ██  #33FF57  neo-green
- ██  #A855F7  neo-purple     ██  #FF9F1C  neo-orange
- ██  #FF2A2A  neo-red        ██  #121212  neo-black
 ```
 
 ---
