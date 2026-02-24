@@ -6,26 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="description"
-        content="Simon Laurent | Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
+        content="Simon Laurent | Full Stack Developer — Portfolio. JavaScript, Python, React, Dart, Java.">
     <meta name="keywords"
-        content="Simon Laurent, Full Stack Developer, Portfolio, Web Development, JavaScript, Python, Flutter, Java">
+        content="Simon Laurent, Full Stack Developer, Portfolio, Web Development, JavaScript, Python, React, Dart, Java">
     <meta name="author" content="Simon Laurent">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="SIMON LAURENT | Full Stack">
-    <meta property="og:description"
-        content="Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
+    <meta property="og:description" content="Full Stack Developer — Portfolio. JavaScript, Python, React, Dart, Java.">
     <meta property="og:image" content="https://avatars.githubusercontent.com/u/97893962?v=4">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="SIMON LAURENT | Full Stack">
     <meta property="twitter:description"
-        content="Full Stack Developer — Portfolio. JavaScript, Python, Dart, Java.">
+        content="Full Stack Developer — Portfolio. JavaScript, Python, React, Dart, Java.">
 
     <title>SIMON LAURENT | Full Stack</title>
 
     <meta name="theme-color" content="#121212">
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <link rel="preload"
         href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Space+Grotesk:wght@800&display=swap"
         as="style">
@@ -37,15 +36,15 @@
       "name": "Simon Laurent",
       "jobTitle": "Full Stack Developer",
       "image": "https://avatars.githubusercontent.com/u/97893962?v=4",
-      "knowsAbout": ["JavaScript", "Python", "Dart", "Flutter", "Java", "HTML/CSS", "Node.js"],
+      "knowsAbout": ["JavaScript", "Python", "React", "Dart", "Flutter", "Java", "HTML/CSS", "Node.js"],
       "sameAs": [
         "https://github.com/babaygo"
       ],
-      "description": "Full Stack Developer specializing in high-performance web experiences."
+      "description": "Full Stack Developer specializing in web development, React, and Node.js."
     }
     </script>
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="js/components.js"></script>
 </head>
 
@@ -69,7 +68,8 @@
         <div class="absolute top-20 right-20 text-9xl opacity-5 font-black select-none pointer-events-none">CODE</div>
 
         <div class="relative z-10 text-center max-w-5xl">
-            <div class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
+            <div
+                class="inline-block bg-neo-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
                 <span class="font-mono font-bold text-neo-green bg-black px-2 mr-2">●</span>
                 <span class="font-mono font-bold">SYSTEM STATUS: ONLINE</span>
             </div>
@@ -77,14 +77,13 @@
             <h1
                 class="text-[13vw] md:text-[10vw] leading-[0.8] font-black uppercase tracking-tighter mb-6 reveal mix-blend-darken">
                 FULL STACK<br>
-                <span class="text-white text-stroke-black"
-                    style="-webkit-text-stroke: 3px black;">DEVELOPER</span>
+                <span class="text-white text-stroke-black" style="-webkit-text-stroke: 3px black;">DEVELOPER</span>
             </h1>
 
             <p
-                class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal rotate-1">
-                Je construis des produits digitaux qui refusent d'être ennuyeux. <br>
-                <b>JavaScript • Python • Dart • Java</b>
+                class="font-mono text-lg md:text-2xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal">
+                Développeur web<br>
+                <b>JavaScript • React • Node.js • Java</b>
             </p>
 
             <div class="flex flex-col md:flex-row justify-center gap-6 reveal">
@@ -92,9 +91,9 @@
                     class="bg-black text-white border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover">
                     VOIR MES PROJETS
                 </a>
-                <a href="#contact"
+                <a href="assets/CV_LAURENT_SIMON.pdf" download
                     class="bg-neo-white text-black border-2 border-black px-10 py-5 text-xl font-bold shadow-hard hover:bg-neo-pink hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
-                    <i class="ri-mail-line"></i> ME CONTACTER
+                    <i class="ri-download-line"></i> TÉLÉCHARGER MON CV
                 </a>
             </div>
         </div>
@@ -104,15 +103,14 @@
     <div class="border-b-4 border-black bg-neo-blue py-3 relative z-20">
         <div class="marquee-container font-mono font-bold text-2xl text-white">
             <div class="marquee-content">
-                /// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB APPS /// MOBILE APPS ///
-                FAST /// SECURE /// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB APPS /// MOBILE APPS ///
-                FAST /// SECURE ///
+                <span>/// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB APPS /// IA&nbsp;</span>
+                <span>/// OPEN FOR WORK /// FULL STACK DEVELOPMENT /// UI/UX DESIGN /// WEB APPS /// IA&nbsp;</span>
             </div>
         </div>
     </div>
 
     <!-- ABOUT SECTION -->
-    <section id="about" class="py-24 px-4 max-w-7xl mx-auto border-x-4 border-black bg-white my-12 shadow-hard-lg">
+    <section id="about" class="py-24 px-4 max-w-7xl mx-auto border-4 border-black bg-white my-12 shadow-hard-lg">
         <div class="grid grid-cols-1 md:grid-cols-12 gap-12">
             <div class="md:col-span-4 reveal">
                 <div class="aspect-square bg-gray-200 border-4 border-black relative shadow-hard overflow-hidden group">
@@ -125,13 +123,13 @@
             <div class="md:col-span-8 flex flex-col justify-center reveal">
                 <h2 class="text-6xl font-black uppercase mb-6">Qui suis-je ?</h2>
                 <p class="font-mono text-xl leading-relaxed mb-6">
-                    Je suis Simon Laurent. Un développeur full stack passionné qui croit que le web mérite plus de
-                    <span class="hl">personnalité</span> et de créativité.
+                    Je suis Simon Laurent. Un développeur full stack passionné de technologies, motivé par la 
+                    <span class="hl">curiosité</span>, l'<span class="hl">optimisation</span> et les <span class="hl">challenges</span>.
                 </p>
                 <p class="font-mono text-lg mb-8 text-gray-600 border-l-4 border-neo-purple pl-4">
-                    > Spécialisé en développement web et mobile.<br>
+                    > Spécialisé en développement web et systèmes embarqués.<br>
                     > Passionné par l'IA et les nouvelles technologies.<br>
-                    > Du code propre qui fonctionne, toujours.
+                    > Du code propre et sécurisé.
                 </p>
 
                 <div class="flex gap-4">
@@ -147,8 +145,7 @@
     </section>
 
     <!-- TECH STACK SECTION -->
-    <section id="skills"
-        class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden">
+    <section id="skills" class="py-20 bg-neo-black text-neo-white border-y-4 border-black relative overflow-hidden">
         <div class="grid-bg"></div>
 
         <div class="max-w-[1400px] mx-auto px-4 relative z-10">
@@ -163,22 +160,70 @@
             </div>
 
             <div class="flex flex-wrap justify-center md:justify-start">
-                <div class="tech-item hover:!bg-neo-yellow"><div class="tech-label">>_ LANGUAGE</div><div class="tech-name">JAVASCRIPT</div></div>
-                <div class="tech-item hover:!bg-neo-blue"><div class="tech-label">>_ LANGUAGE</div><div class="tech-name">PYTHON</div></div>
-                <div class="tech-item hover:!bg-neo-pink"><div class="tech-label">>_ MOBILE</div><div class="tech-name">DART</div></div>
-                <div class="tech-item hover:!bg-neo-green"><div class="tech-label">>_ FRAMEWORK</div><div class="tech-name">FLUTTER</div></div>
-                <div class="tech-item hover:!bg-neo-orange"><div class="tech-label">>_ LANGUAGE</div><div class="tech-name">JAVA</div></div>
-                <div class="tech-item hover:!bg-white"><div class="tech-label">>_ CORE</div><div class="tech-name">HTML5</div></div>
-                <div class="tech-item hover:!bg-neo-purple"><div class="tech-label">>_ STYLING</div><div class="tech-name">CSS3</div></div>
-                <div class="tech-item hover:!bg-neo-yellow"><div class="tech-label">>_ BACKEND</div><div class="tech-name">NODE.JS</div></div>
-                <div class="tech-item hover:!bg-neo-pink"><div class="tech-label">>_ STYLING</div><div class="tech-name">TAILWIND</div></div>
-                <div class="tech-item hover:!bg-neo-blue"><div class="tech-label">>_ VERSION</div><div class="tech-name">GIT</div></div>
-                <div class="tech-item hover:!bg-neo-green"><div class="tech-label">>_ OPS</div><div class="tech-name">GITHUB</div></div>
-                <div class="tech-item hover:!bg-neo-orange"><div class="tech-label">>_ AI</div><div class="tech-name">AI/ML</div></div>
-                <div class="tech-item hover:!bg-neo-purple"><div class="tech-label">>_ LIBRARY</div><div class="tech-name">REACT</div></div>
-                <div class="tech-item hover:!bg-white"><div class="tech-label">>_ DATA</div><div class="tech-name">SQL</div></div>
-                <div class="tech-item hover:!bg-neo-red"><div class="tech-label">>_ DEVOPS</div><div class="tech-name">CI/CD</div></div>
-                <div class="tech-item hover:!bg-neo-yellow"><div class="tech-label">>_ OS</div><div class="tech-name">LINUX</div></div>
+                <div class="tech-item hover:!bg-neo-yellow">
+                    <div class="tech-label">>_ LANGUAGE</div>
+                    <div class="tech-name">JAVASCRIPT</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-blue">
+                    <div class="tech-label">>_ LANGUAGE</div>
+                    <div class="tech-name">PYTHON</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-pink">
+                    <div class="tech-label">>_ MOBILE</div>
+                    <div class="tech-name">DART</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-green">
+                    <div class="tech-label">>_ FRAMEWORK</div>
+                    <div class="tech-name">FLUTTER</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-orange">
+                    <div class="tech-label">>_ LANGUAGE</div>
+                    <div class="tech-name">JAVA</div>
+                </div>
+                <div class="tech-item hover:!bg-white">
+                    <div class="tech-label">>_ CORE</div>
+                    <div class="tech-name">HTML5</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-purple">
+                    <div class="tech-label">>_ STYLING</div>
+                    <div class="tech-name">CSS3</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-yellow">
+                    <div class="tech-label">>_ BACKEND</div>
+                    <div class="tech-name">NODE.JS</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-pink">
+                    <div class="tech-label">>_ STYLING</div>
+                    <div class="tech-name">TAILWIND</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-blue">
+                    <div class="tech-label">>_ VERSION</div>
+                    <div class="tech-name">GIT</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-green">
+                    <div class="tech-label">>_ OPS</div>
+                    <div class="tech-name">GITHUB</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-orange">
+                    <div class="tech-label">>_ AI</div>
+                    <div class="tech-name">AI/ML</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-purple">
+                    <div class="tech-label">>_ LIBRARY</div>
+                    <div class="tech-name">REACT</div>
+                </div>
+                <div class="tech-item hover:!bg-white">
+                    <div class="tech-label">>_ DATA</div>
+                    <div class="tech-name">SQL</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-red">
+                    <div class="tech-label">>_ DEVOPS</div>
+                    <div class="tech-name">CI/CD</div>
+                </div>
+                <div class="tech-item hover:!bg-neo-yellow">
+                    <div class="tech-label">>_ OS</div>
+                    <div class="tech-name">LINUX</div>
+                </div>
             </div>
 
             <div class="border-t-4 border-white mt-8 pt-4 flex justify-between font-mono text-xs text-gray-500">
@@ -190,8 +235,7 @@
     </section>
 
     <!-- CODING STATS SECTION -->
-    <section id="coding-stats"
-        class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
+    <section id="coding-stats" class="py-12 bg-neo-black text-white border-y-4 border-black relative overflow-hidden">
         <div class="grid-bg"></div>
 
         <div class="max-w-7xl mx-auto px-4 relative z-10">
@@ -228,8 +272,8 @@
                             </div>
                         </div>
                         <div class="text-right">
-                            <div id="total-contributions"
-                                class="text-2xl font-black text-neo-green tracking-tighter">--</div>
+                            <div id="total-contributions" class="text-2xl font-black text-neo-green tracking-tighter">--
+                            </div>
                             <p class="text-[8px] font-mono text-gray-500 uppercase">Commits</p>
                         </div>
                     </div>
@@ -306,11 +350,15 @@
                 <!-- Experience 1: Développeur Full-Stack -->
                 <div class="reveal mb-12 md:pl-24 relative">
                     <!-- Timeline dot -->
-                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-blue border-4 border-black rounded-full z-10"></div>
-                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                    <div
+                        class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-blue border-4 border-black rounded-full z-10">
+                    </div>
+                    <div
+                        class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                             <div>
-                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-blue transition-colors">
+                                <h3
+                                    class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-blue transition-colors">
                                     Développeur Full-Stack
                                 </h3>
                                 <div class="flex items-center gap-2 mt-1">
@@ -319,7 +367,8 @@
                                     <span class="font-mono text-gray-400">// Nantes</span>
                                 </div>
                             </div>
-                            <div class="bg-neo-blue text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                            <div
+                                class="bg-neo-blue text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
                                 2022 — 2024
                             </div>
                         </div>
@@ -327,15 +376,20 @@
                             <ul class="space-y-3 font-mono text-sm">
                                 <li class="flex gap-3">
                                     <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
-                                    <span>Développement web Frontend (<span class="hl">Angular</span>) et Backend (<span class="hl">Express.js</span>) sur les outils internes du groupe (CRM, ERP)</span>
+                                    <span>Développement web Frontend (<span class="hl">Angular</span>) et Backend (<span
+                                            class="hl">Express.js</span>) sur les outils internes du groupe (CRM,
+                                        ERP)</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
-                                    <span>Mise en place d'un outil d'<span class="hl !bg-neo-pink">intelligence artificielle</span> pour automatiser l'analyse juridique des DCE et l'amélioration de la prise de décision</span>
+                                    <span>Mise en place d'un outil d'<span class="hl !bg-neo-pink">intelligence
+                                            artificielle</span> pour automatiser l'analyse juridique des DCE et
+                                        l'amélioration de la prise de décision</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-neo-blue font-bold shrink-0">&gt;_</span>
-                                    <span>Intégration de <span class="hl !bg-neo-green">GitHub Copilot</span> dans l'équipe développeurs</span>
+                                    <span>Intégration de <span class="hl !bg-neo-green">GitHub Copilot</span> dans
+                                        l'équipe développeurs</span>
                                 </li>
                             </ul>
                         </div>
@@ -351,11 +405,15 @@
 
                 <!-- Experience 2: Apprenti Systèmes Embarqués -->
                 <div class="reveal mb-12 md:pl-24 relative">
-                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-purple border-4 border-black rounded-full z-10"></div>
-                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                    <div
+                        class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-purple border-4 border-black rounded-full z-10">
+                    </div>
+                    <div
+                        class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                             <div>
-                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-purple transition-colors">
+                                <h3
+                                    class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-purple transition-colors">
                                     Technicien Systèmes Embarqués
                                 </h3>
                                 <div class="flex items-center gap-2 mt-1">
@@ -364,7 +422,8 @@
                                     <span class="font-mono text-gray-400">// Nantes</span>
                                 </div>
                             </div>
-                            <div class="bg-neo-purple text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                            <div
+                                class="bg-neo-purple text-white px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
                                 2021 — 2022
                             </div>
                         </div>
@@ -372,11 +431,15 @@
                             <ul class="space-y-3 font-mono text-sm">
                                 <li class="flex gap-3">
                                     <span class="text-neo-purple font-bold shrink-0">&gt;_</span>
-                                    <span>Ajout de fonctionnalités dans un automate pour automatiser un processus de pluviation et sauvegarde de données en temps réel (<span class="hl">Visilogic</span>)</span>
+                                    <span>Ajout de fonctionnalités dans un automate pour automatiser un processus de
+                                        pluviation et sauvegarde de données en temps réel (<span
+                                            class="hl">Visilogic</span>)</span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-neo-purple font-bold shrink-0">&gt;_</span>
-                                    <span>Développement d'un logiciel de <span class="hl !bg-neo-pink">Stitching en temps réel</span> avec 8 caméras embarquées dans une centrifugeuse (<span class="hl">Python / Tkinter</span>)</span>
+                                    <span>Développement d'un logiciel de <span class="hl !bg-neo-pink">Stitching en
+                                            temps réel</span> avec 8 caméras embarquées dans une centrifugeuse (<span
+                                            class="hl">Python / Tkinter</span>)</span>
                                 </li>
                             </ul>
                         </div>
@@ -391,11 +454,15 @@
 
                 <!-- Experience 3: Stage Robot -->
                 <div class="reveal mb-4 md:pl-24 relative">
-                    <div class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-orange border-4 border-black rounded-full z-10"></div>
-                    <div class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
+                    <div
+                        class="hidden md:flex absolute left-5 top-4 w-7 h-7 bg-neo-orange border-4 border-black rounded-full z-10">
+                    </div>
+                    <div
+                        class="bg-white border-4 border-black shadow-hard p-6 md:p-8 hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all group">
                         <div class="flex flex-col md:flex-row md:items-center justify-between mb-4 gap-2">
                             <div>
-                                <h3 class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-orange transition-colors">
+                                <h3
+                                    class="text-3xl md:text-4xl font-black uppercase group-hover:text-neo-orange transition-colors">
                                     Stage — Jauge batterie Robot
                                 </h3>
                                 <div class="flex items-center gap-2 mt-1">
@@ -404,7 +471,8 @@
                                     <span class="font-mono text-gray-400">// Nantes</span>
                                 </div>
                             </div>
-                            <div class="bg-neo-orange text-black px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
+                            <div
+                                class="bg-neo-orange text-black px-4 py-2 border-2 border-black font-mono font-bold text-sm shadow-hard-sm whitespace-nowrap">
                                 AVR — JUIN 2021
                             </div>
                         </div>
@@ -416,11 +484,14 @@
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-neo-orange font-bold shrink-0">&gt;_</span>
-                                    <span>Algorithmes de calcul de consommation batterie en <span class="hl">Python</span> et implémentation sur PLC en <span class="hl">C</span></span>
+                                    <span>Algorithmes de calcul de consommation batterie en <span
+                                            class="hl">Python</span> et implémentation sur PLC en <span
+                                            class="hl">C</span></span>
                                 </li>
                                 <li class="flex gap-3">
                                     <span class="text-neo-orange font-bold shrink-0">&gt;_</span>
-                                    <span>Création d'une IHM avec <span class="hl">Qt Designer</span> pour afficher le pourcentage de batterie</span>
+                                    <span>Création d'une IHM avec <span class="hl">Qt Designer</span> pour afficher le
+                                        pourcentage de batterie</span>
                                 </li>
                             </ul>
                         </div>
@@ -458,11 +529,17 @@
                 <div class="reveal group">
                     <div class="edu-card">
                         <div class="flex items-center justify-between mb-4">
-                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">2022 — 2024</div>
-                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i class="ri-graduation-cap-fill text-xl text-black"></i></div>
+                            <div
+                                class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2022 — 2024</div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i
+                                    class="ri-graduation-cap-fill text-xl text-black"></i></div>
                         </div>
-                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">Master — BAC+5</h3>
-                        <p class="font-mono text-neo-pink text-sm mb-3">Expert Informatique et Systèmes d'Informations</p>
+                        <h3
+                            class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            Master — BAC+5</h3>
+                        <p class="font-mono text-neo-pink text-sm mb-3">Expert Informatique et Systèmes d'Informations
+                        </p>
                         <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
                             <i class="ri-map-pin-line text-neo-pink"></i>
                             <span class="font-mono text-sm text-gray-400">EPSI, Nantes</span>
@@ -474,10 +551,15 @@
                 <div class="reveal group">
                     <div class="edu-card">
                         <div class="flex items-center justify-between mb-4">
-                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">2021 — 2022</div>
-                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i class="ri-graduation-cap-fill text-xl text-black"></i></div>
+                            <div
+                                class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2021 — 2022</div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i
+                                    class="ri-graduation-cap-fill text-xl text-black"></i></div>
                         </div>
-                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">Licence Pro — BAC+3</h3>
+                        <h3
+                            class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            Licence Pro — BAC+3</h3>
                         <p class="font-mono text-neo-pink text-sm mb-3">Systèmes Électroniques Communicants</p>
                         <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
                             <i class="ri-map-pin-line text-neo-pink"></i>
@@ -490,11 +572,17 @@
                 <div class="reveal group">
                     <div class="edu-card">
                         <div class="flex items-center justify-between mb-4">
-                            <div class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">2019 — 2021</div>
-                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i class="ri-graduation-cap-fill text-xl text-black"></i></div>
+                            <div
+                                class="bg-neo-pink text-black px-3 py-1 font-mono font-bold text-sm border-2 border-white">
+                                2019 — 2021</div>
+                            <div class="w-10 h-10 bg-neo-pink border-2 border-white flex items-center justify-center"><i
+                                    class="ri-graduation-cap-fill text-xl text-black"></i></div>
                         </div>
-                        <h3 class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">DUT — BAC+2</h3>
-                        <p class="font-mono text-neo-pink text-sm mb-3">Génie Électrique et Informatique Industrielle</p>
+                        <h3
+                            class="text-2xl font-black uppercase mb-2 text-white group-hover:text-neo-pink transition-colors">
+                            DUT — BAC+2</h3>
+                        <p class="font-mono text-neo-pink text-sm mb-3">Génie Électrique et Informatique Industrielle
+                        </p>
                         <div class="mt-auto pt-4 border-t border-white/20 flex items-center gap-2">
                             <i class="ri-map-pin-line text-neo-pink"></i>
                             <span class="font-mono text-sm text-gray-400">IUT de Nantes</span>
@@ -663,7 +751,8 @@
     <!-- CONTACT SECTION -->
     <section id="contact" class="py-24 px-4 max-w-5xl mx-auto">
         <div class="bg-white border-4 border-black shadow-hard-xl p-8 md:p-12 relative reveal mt-12">
-            <div class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
+            <div
+                class="absolute -top-10 -left-6 bg-neo-yellow border-4 border-black px-6 py-2 shadow-hard rotate-[-5deg]">
                 <span class="font-black text-2xl">DÉMARRER UN PROJET</span>
             </div>
 
