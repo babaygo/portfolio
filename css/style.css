@@ -24,8 +24,10 @@ body {
 
 .marquee-content {
     display: flex;
-    animation: scroll 40s linear infinite;
+    white-space: nowrap;
+    animation: scroll 20s linear infinite;
     width: max-content;
+    will-change: transform;
 }
 
 .marquee-container:hover .marquee-content {
