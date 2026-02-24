@@ -1,2 +1,5 @@
-# variables d'environnement
+# Config générée au build (contient la clé API)
 js/config.js
+
+# Env local
+.env
