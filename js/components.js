@@ -49,6 +49,8 @@ const Components = (() => {
             '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
             '<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">',
             `<link rel="stylesheet" href="${base}/css/style.css">`,
+            `<script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>`,
+            '<script defer src="/_vercel/insights/script.js"><\/script>',
         ];
         tags.forEach(tag => {
             // avoid duplicates
