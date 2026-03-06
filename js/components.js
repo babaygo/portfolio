@@ -1,13 +1,4 @@
-/**
- * Shared UI components — élimine la duplication HTML entre les pages.
- * 
- * Usage dans chaque page :
- *   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- *   <script src="js/components.js"></script>
- *   Puis les éléments avec data-component="navbar" etc. sont auto-remplis.
- */
-
-// ─── TAILWIND THEME (injected synchronously in <head> for v4 Play CDN) ───
+// TAILWIND THEME
 (function () {
     const style = document.createElement('style');
     style.setAttribute('type', 'text/tailwindcss');
@@ -35,14 +26,13 @@
 
 const Components = (() => {
 
-    // Detect if we're in a subfolder (projects/)
     function getBase() {
         return location.pathname.includes('/projects/') ? '..' : '.';
     }
 
     const base = getBase();
 
-    // ─── COMMON <head> TAGS ───
+    // COMMON <head> TAGS
     function injectHead() {
         const tags = [
             '<meta name="theme-color" content="#121212">',
@@ -56,7 +46,6 @@ const Components = (() => {
             '<script defer src="/_vercel/insights/script.js"><\/script>',
         ];
         tags.forEach(tag => {
-            // avoid duplicates
             const tmp = document.createElement('div');
             tmp.innerHTML = tag;
             const el = tmp.firstElementChild;
@@ -66,13 +55,13 @@ const Components = (() => {
         });
     }
 
-    // ─── CURSOR + PROGRESS BAR ───
+    // CURSOR + PROGRESS BAR
     function renderCursor(progressColor = 'neo-green') {
         return `<div id="cursor" class="w-6 h-6 bg-white rounded-full border-2 border-black hidden lg:block"></div>
 <div class="fixed top-0 left-0 h-2 bg-${progressColor} z-[60] border-b-2 border-black" id="progressBar" style="width: 0%"></div>`;
     }
 
-    // ─── NAVBAR ───
+    // NAVBAR
     function renderNavbar(isSubpage = false) {
         const prefix = isSubpage ? '../index.html' : '';
         const home = isSubpage ? '../index.html' : '#';
@@ -96,7 +85,7 @@ const Components = (() => {
 </nav>`;
     }
 
-    // ─── BACK BUTTON (project pages) ───
+    // BACK BUTTON
     function renderBackButton() {
         return `<div class="fixed bottom-6 left-6 z-50">
     <a href="../index.html#projects"
@@ -106,7 +95,7 @@ const Components = (() => {
 </div>`;
     }
 
-    // ─── FOOTER (full — index page) ───
+    // FOOTER MAIN
     function renderFooterFull() {
         return `<footer class="bg-black text-white py-16 px-4 border-t-8 border-neo-green font-mono relative overflow-hidden">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
@@ -139,7 +128,7 @@ const Components = (() => {
 </footer>`;
     }
 
-    // ─── FOOTER (compact — project pages) ───
+    // FOOTER COMPACT
     function renderFooterCompact() {
         return `<footer class="bg-black text-white py-8 px-4 border-t-4 border-neo-green font-mono">
     <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
@@ -152,14 +141,12 @@ const Components = (() => {
 </footer>`;
     }
 
-    // ─── AUTO-INIT: fill data-component placeholders ───
+    // AUTO-INIT
     function init() {
         const isSubpage = location.pathname.includes('/projects/');
 
-        // Inject head resources
         injectHead();
 
-        // Fill placeholders
         document.querySelectorAll('[data-component]').forEach(el => {
             const name = el.dataset.component;
             const color = el.dataset.progressColor || 'neo-green';
@@ -183,7 +170,6 @@ const Components = (() => {
         });
     }
 
-    // Run when DOM is ready
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', init);
     } else {

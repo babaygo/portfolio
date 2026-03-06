@@ -1,4 +1,4 @@
-// Custom Cursor Logic
+// Custom Cursor
 function initCursor() {
     const cursor = document.getElementById('cursor');
     if (!cursor) return;
@@ -26,7 +26,7 @@ function initCursor() {
     });
 }
 
-// Scroll Reveal Logic
+// Scroll Reveal
 function initReveal() {
     const revealElements = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver((entries) => {
