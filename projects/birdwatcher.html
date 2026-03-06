@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Birdwatcher — Application d'observation d'oiseaux par Simon Laurent">
-    <title>Birdwatcher | Simon Laurent</title>
+    <meta name="description" content="BirdWatcher v2 — Piège photo autonome à détection IA sur Raspberry Pi Zero 2 W par Simon Laurent">
+    <title>BirdWatcher v2 | Simon Laurent</title>
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="../js/components.js"></script>
@@ -26,7 +26,7 @@
 
         <div class="relative z-10 text-center max-w-5xl">
             <div class="inline-block bg-neo-blue text-white border-2 border-black px-4 py-1 mb-6 shadow-hard rotate-[-2deg] reveal">
-                <span class="font-mono font-bold">PROJET // COMPUTER VISION</span>
+                <span class="font-mono font-bold">PROJET // EMBEDDED AI</span>
             </div>
 
             <h1 class="text-[10vw] md:text-[8vw] leading-[0.85] font-black uppercase tracking-tighter mb-6 reveal">
@@ -34,17 +34,13 @@
             </h1>
 
             <p class="font-mono text-lg md:text-xl max-w-2xl mx-auto mb-10 bg-neo-yellow border-2 border-black p-4 shadow-hard reveal">
-                Application d'observation et d'identification d'oiseaux utilisant la vision par ordinateur et l'intelligence artificielle pour la détection en temps réel.
+                Piège photo autonome à détection IA — tourne sur Raspberry Pi Zero 2 W avec YOLOv8 et enregistre les oiseaux détectés en temps réel.
             </p>
 
             <div class="flex flex-col md:flex-row justify-center gap-4 reveal">
-                <a href="https://github.com/babaygo/Birdwatcher" target="_blank"
-                    class="bg-neo-black text-white border-2 border-black px-8 py-4 text-lg font-bold shadow-hard hover:bg-neo-green hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
-                    <i class="ri-github-fill"></i> CODE SOURCE (v1)
-                </a>
                 <a href="https://github.com/babaygo/birdwatcher_v2" target="_blank"
                     class="bg-neo-blue text-white border-2 border-black px-8 py-4 text-lg font-bold shadow-hard hover:bg-neo-yellow hover:text-black hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all cursor-hover flex items-center justify-center gap-2">
-                    <i class="ri-github-fill"></i> CODE SOURCE (v2)
+                    <i class="ri-github-fill"></i> CODE SOURCE
                 </a>
             </div>
         </div>
@@ -57,34 +53,38 @@
             <!-- Left: Info -->
             <div class="reveal">
                 <h2 class="text-4xl font-black uppercase mb-8 border-b-4 border-black pb-4">Description</h2>
-                <p class="font-mono text-lg leading-relaxed mb-8 text-gray-700">
-                    Birdwatcher est un projet de vision par ordinateur dédié à l'identification automatique d'espèces d'oiseaux. Grâce à des algorithmes de machine learning, l'application peut détecter et classifier les oiseaux en temps réel.
+                <p class="font-mono text-lg leading-relaxed mb-8 text-gray-700 text-justify">
+                    BirdWatcher est un système embarqué complet qui transforme une Raspberry Pi Zero 2 W en piège photo intelligent. La caméra filme en continu, un modèle YOLOv8n (exporté en ONNX à 320×320) analyse chaque frame, et dès qu'un oiseau est détecté, une vidéo haute résolution est automatiquement enregistrée et convertie en MP4.
                 </p>
-                <p class="font-mono text-lg leading-relaxed mb-8 text-gray-700">
-                    Le projet a évolué en deux versions : la v1 en Python pur avec des modèles de base, et la v2 avec une interface web HTML améliorée et des modèles plus performants.
+                <p class="font-mono text-lg leading-relaxed mb-8 text-gray-700 text-justify">
+                    Une interface web (Flask + Tailwind) permet de consulter, télécharger et supprimer les captures depuis n'importe quel appareil sur le réseau local. Un moniteur batterie surveille en permanence l'UPS et éteint proprement le système avant que la LiPo ne se vide.
                 </p>
 
                 <h3 class="text-2xl font-black uppercase mb-4">Fonctionnalités clés</h3>
                 <ul class="space-y-3 font-mono text-gray-700">
                     <li class="flex items-start gap-3">
                         <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">01</span>
-                        Détection d'oiseaux en temps réel par caméra
+                        Inférence YOLOv8 temps réel sur SoC à 1 GHz / 512 Mo RAM
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">02</span>
-                        Classification automatique des espèces
+                        Enregistrement automatique, avec résolution dynamique, dès détection d'oiseau
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">03</span>
-                        Base de données d'espèces avec informations détaillées
+                        Pipeline double flux picamera2 (main 1080p + lores 480p pour l'IA)
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">04</span>
-                        Interface web pour visualiser les résultats (v2)
+                        Interface web Flask pour consultation vidéos, données système et réglages
                     </li>
                     <li class="flex items-start gap-3">
                         <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">05</span>
-                        Modèles ML entraînés et optimisés
+                        Moniteur batterie avec extinction automatique (UPS HAT + INA219)
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="bg-neo-blue text-white px-2 py-0.5 text-xs font-bold mt-1">06</span>
+                        Déploiement autonome via 3 services systemd au boot
                     </li>
                 </ul>
             </div>
@@ -101,16 +101,16 @@
                             <div class="font-black text-xl">Python</div>
                         </div>
                         <div class="border-2 border-white/20 p-4 hover:border-neo-blue transition-colors">
-                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Domain</div>
-                            <div class="font-black text-xl">CV / AI</div>
+                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Model IA</div>
+                            <div class="font-black text-xl">YOLOv8 ONNX</div>
                         </div>
                         <div class="border-2 border-white/20 p-4 hover:border-neo-blue transition-colors">
-                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Frontend (v2)</div>
-                            <div class="font-black text-xl">HTML/CSS</div>
+                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Backend</div>
+                            <div class="font-black text-xl">Flask</div>
                         </div>
                         <div class="border-2 border-white/20 p-4 hover:border-neo-blue transition-colors">
-                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Status</div>
-                            <div class="font-black text-xl text-neo-blue">V2 ACTIVE</div>
+                            <div class="text-[9px] font-mono text-neo-green mb-1 uppercase tracking-widest opacity-70">Hardware</div>
+                            <div class="font-black text-xl">RPi Zero 2 W</div>
                         </div>
                     </div>
                 </div>
@@ -124,14 +124,14 @@
                         </div>
                         <div class="flex justify-between items-center border-b border-dashed border-gray-300 pb-2">
                             <span class="text-gray-500 text-sm uppercase">Rôle</span>
-                            <span class="font-bold">Dev / ML Engineer</span>
+                            <span class="font-bold">Dev Embedded / IA</span>
                         </div>
                         <div class="flex justify-between items-center border-b border-dashed border-gray-300 pb-2">
-                            <span class="text-gray-500 text-sm uppercase">Repo v1</span>
-                            <a href="https://github.com/babaygo/Birdwatcher" target="_blank" class="font-bold text-neo-blue hover:underline cursor-hover">GitHub</a>
+                            <span class="text-gray-500 text-sm uppercase">Plateforme</span>
+                            <span class="font-bold">Raspberry Pi Zero 2 W</span>
                         </div>
                         <div class="flex justify-between items-center">
-                            <span class="text-gray-500 text-sm uppercase">Repo v2</span>
+                            <span class="text-gray-500 text-sm uppercase">Repo</span>
                             <a href="https://github.com/babaygo/birdwatcher_v2" target="_blank" class="font-bold text-neo-blue hover:underline cursor-hover">GitHub</a>
                         </div>
                     </div>
